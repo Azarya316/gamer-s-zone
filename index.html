@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamer's Zone - Démo des Fonctionnalités</title>
+    <meta
+      name="description"
+      content="Démonstration des nouvelles fonctionnalités de Gamer's Zone"
+    />
+
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="gamer.css" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Script JavaScript -->
+    <script src="gamer.js" defer></script>
+  </head>
+  <body>
+    <!-- Particules d'arrière-plan -->
+    <div class="gaming-particles"></div>
+
+    <!-- Header principal -->
+    <header id="accueil">
+      <div class="header-content">
+        <h1 class="main-title">Gamer's Zone</h1>
+        <h2 class="subtitle">Démonstration des Fonctionnalités</h2>
+        <div class="header-actions">
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="header-decoration">
+        <div class="floating-icon"><i class="fas fa-gamepad"></i></div>
+        <div class="floating-icon"><i class="fas fa-dice"></i></div>
+        <div class="floating-icon"><i class="fas fa-trophy"></i></div>
+      </div>
+    </header>
+
+    <!-- Navigation principale -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <ul id="myMenu">
+          <li>
+            <a href="#accueil" class="nav-link active"
+              ><i class="fas fa-home"></i> Accueil</a
+            >
+          </li>
+          <li>
+            <a href="#jeux" class="nav-link"
+              ><i class="fas fa-gamepad"></i> Jeux</a
+            >
+          </li>
+          <li>
+            <a href="#categories" class="nav-link"
+              ><i class="fas fa-th-large"></i> Catégories</a
+            >
+          </li>
+          <li>
+            <a href="#bibliotheque" class="nav-link"
+              ><i class="fas fa-book"></i> Bibliothèque</a
+            >
+          </li>
+          <li>
+            <a href="#aide" class="nav-link"
+              ><i class="fas fa-question-circle"></i> Aide</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav-link power-btn"
+              ><i class="fas fa-power-off"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Barre de recherche moderne -->
+    <div class="search-container">
+      <div class="search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input
+          type="text"
+          placeholder="Rechercher des jeux, actualités..."
+          id="mySearch"
+          onkeyup="myFunction()"
+        />
+        <button
+          class="search-btn"
+          onclick="document.getElementById('mySearch').focus()"
+        >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section de présentation -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h3 class="hero-title">🎮 Gamer's Zone</h3>
+        <p class="hero-description">
+          Découvrez l'univers du gaming avec nos jeux et informations détaillées
+        </p>
+      </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="contenu" id="contenu">
+      <div class="wrapper">
+        <aside class="sidebar" id="jeux">
+          <article class="game-card">
+            <div class="game-image-container">
+              <img
+                src="img/teken.jpg"
+                alt="Tekken 6"
+                id="tekken"
+                class="game-image"
+              />
+              <div class="game-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3 class="title">TEKKEN 6</h3>
+
+            <!-- Statistiques du jeu -->
+            <div class="game-stats">
+              <div class="stat-item">
+                <div class="stat-value">2009</div>
+                <div class="stat-label">Sortie</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">PEGI 16+</div>
+                <div class="stat-label">Âge</div>
+              </div>
+            </div>
+
+            <div class="game-info">
+              <p>
+                <i class="fas fa-building"></i> Développeur: Namco Bandai Games
+              </p>
+              <p><i class="fas fa-globe"></i> Éditeur: Namco Bandai Games</p>
+              <p>
+                <i class="fas fa-user-tie"></i> Réalisateur: Yuichi Yonemori
+              </p>
+              <p><i class="fas fa-crown"></i> Producteur: Katsuhiro Harada</p>
+              <p><i class="fas fa-gamepad"></i> Genre: Combat, beat 'em up</p>
+              <p><i class="fas fa-users"></i> Mode: Un joueur, multijoueur</p>
+              <p>
+                <i class="fas fa-tv"></i> Plateformes: PS3, Xbox 360, PSP,
+                Arcade
+              </p>
+            </div>
+
+            <!-- Barres de progression pour les caractéristiques -->
+            <div class="game-characteristics">
+              <h4><i class="fas fa-chart-bar"></i> Caractéristiques</h4>
+              <div class="char-item">
+                <span>Graphismes</span>
+                <progress value="100" max="100"></progress>
+              </div>
+              <div class="char-item">
+                <span>Personnages</span>
+                <progress value="100" max="100"></progress>
+              </div>
+              <div class="char-item">
+                <span>Niveaux</span>
+                <progress value="80" max="100"></progress>
+              </div>
+              <div class="char-item">
+                <span>Célébrité</span>
+                <progress value="90" max="100"></progress>
+              </div>
+            </div>
+
+            <div class="game-actions">
+              <button class="installer1">
+                <i class="fas fa-download"></i> Télécharger
+              </button>
+              <button class="installer2">
+                <i class="fas fa-info-circle"></i> Plus d'infos
+              </button>
+              <button class="installer">
+                <i class="fas fa-play"></i> Jouer maintenant
+              </button>
+            </div>
+          </article>
+
+          <!-- Deuxième jeu : Free Fire -->
+          <article class="game-card" style="margin-top: 30px">
+            <div class="game-image-container">
+              <img src="img/free.jpg" alt="Free Fire" class="game-image" />
+              <div class="game-overlay">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3 class="title">FREEFIRE</h3>
+
+            <div class="game-info">
+              <p>
+                <i class="fas fa-building"></i> Développeur: 111 Dots Studio
+              </p>
+              <p><i class="fas fa-globe"></i> Éditeur: Garena</p>
+              <p><i class="fas fa-calendar"></i> Sortie: 30 septembre 2017</p>
+              <p><i class="fas fa-gamepad"></i> Genre: Battle Royale</p>
+              <p><i class="fas fa-mobile-alt"></i> Plateforme: Mobile</p>
+              <p><i class="fas fa-users"></i> Mode: Multijoueur</p>
+            </div>
+
+            <div class="game-actions">
+              <button class="installer1">
+                <i class="fas fa-download"></i> Télécharger
+              </button>
+              <button class="installer2">
+                <i class="fas fa-info-circle"></i> Plus d'infos
+              </button>
+            </div>
+          </article>
+        </aside>
+
+        <main class="main-content">
+          <section class="content-section" id="categories">
+            <h2 class="section-title">
+              <i class="fas fa-gamepad"></i> Informations des Jeux
+            </h2>
+
+            <div class="game-info-section">
+              <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> Tekken 6</h3>
+                <p>
+                  Jeu de combat développé par Namco Bandai Games, sorti en 2009
+                  sur PS3, Xbox 360, PSP et Arcade. Un titre majeur de la série
+                  Tekken avec des graphismes révolutionnaires et un gameplay de
+                  combat avancé.
+                </p>
+              </div>
+
+              <div class="info-card">
+                <h3><i class="fas fa-mobile-alt"></i> Free Fire</h3>
+                <p>
+                  Battle Royale mobile développé par 111 Dots Studio et édité
+                  par Garena, sorti en 2017. Un jeu de survie intense où 50
+                  joueurs s'affrontent sur une île en constante réduction.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Bibliothèque -->
+          <section class="content-section" id="bibliotheque">
+            <h2 class="section-title">
+              <i class="fas fa-book"></i> Bibliothèque de Jeux
+            </h2>
+            <div class="game-info-section">
+              <div class="info-card">
+                <h3><i class="fas fa-download"></i> Jeux Disponibles</h3>
+                <p>
+                  Découvrez notre collection complète de jeux vidéo, des
+                  classiques aux dernières sorties. Téléchargez et jouez
+                  instantanément.
+                </p>
+              </div>
+              <div class="info-card">
+                <h3><i class="fas fa-users"></i> Communauté</h3>
+                <p>
+                  Rejoignez notre communauté de gamers passionnés. Partagez vos
+                  expériences et découvrez de nouveaux jeux.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section Aide -->
+          <section class="content-section" id="aide">
+            <h2 class="section-title">
+              <i class="fas fa-question-circle"></i> Centre d'Aide
+            </h2>
+            <div class="game-info-section">
+              <div class="info-card">
+                <h3><i class="fas fa-life-ring"></i> Support</h3>
+                <p>
+                  Besoin d'aide ? Notre équipe de support est disponible 24/7
+                  pour vous assister avec toutes vos questions.
+                </p>
+              </div>
+              <div class="info-card">
+                <h3><i class="fas fa-book-open"></i> Tutoriels</h3>
+                <p>
+                  Apprenez à maîtriser vos jeux préférés avec nos guides et
+                  tutoriels détaillés.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer moderne -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-gamepad"></i> Gamer's Zone</h3>
+          <p>
+            <i class="fas fa-quote-left"></i> Votre destination gaming ultime
+            pour découvrir, partager et vivre votre passion du jeu vidéo.
+            <i class="fas fa-quote-right"></i>
+          </p>
+          <div class="footer-features">
+            <span><i class="fas fa-check-circle"></i> Jeux gratuits</span>
+            <span><i class="fas fa-check-circle"></i> Communauté active</span>
+            <span><i class="fas fa-check-circle"></i> Support 24/7</span>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4><i class="fas fa-sitemap"></i> Navigation</h4>
+          <ul>
+            <li>
+              <a href="gamer-modern.html"
+                ><i class="fas fa-home"></i> Accueil</a
+              >
+            </li>
+            <li>
+              <a href="demo.html"><i class="fas fa-play"></i> Démo</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-th-large"></i> Catégories</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-book"></i> Bibliothèque</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-trophy"></i> Tournois</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-question-circle"></i> Aide & Support</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4><i class="fas fa-gamepad"></i> Catégories</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-fist-raised"></i> Combat</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-car"></i> Course</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-crosshairs"></i> FPS</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chess"></i> Stratégie</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-puzzle-piece"></i> Puzzle</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-dragon"></i> RPG</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4><i class="fas fa-share-alt"></i> Suivez-nous</h4>
+          <p>Rejoignez notre communauté gaming !</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="social-link" title="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="social-link" title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-link" title="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="social-link" title="Discord"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="#" class="social-link" title="Twitch"
+              ><i class="fab fa-twitch"></i
+            ></a>
+          </div>
+          <div class="footer-contact">
+            <p><i class="fas fa-envelope"></i>rasolomampiononaaza@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +261 33 14 259 47</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>
+            <i class="fas fa-copyright"></i> 2024 Gamer's Zone. Tous droits
+            réservés.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="#"><i class="fas fa-shield-alt"></i> Confidentialité</a>
+            <a href="#"><i class="fas fa-file-contract"></i> Conditions</a>
+            <a href="#"><i class="fas fa-cookie-bite"></i> Cookies</a>
+          </div>
+          <p class="footer-motto">
+            <i class="fas fa-gamepad"></i> Gaming is Life!
+            <i class="fas fa-heart"></i>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <button
+      class="back-to-top"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Variables globales pour le thème
+      let currentTheme = "dark";
+
+      // Fonction de changement de thème
+      function toggleTheme() {
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        setTheme(newTheme);
+
+        // Sauvegarder dans le localStorage
+        localStorage.setItem("gamer-theme", newTheme);
+
+        // Mettre à jour le bouton
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) {
+          const icon = themeToggle.querySelector("i");
+          if (icon) {
+            icon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
+          }
+        }
+      }
+
+      // Appliquer le thème
+      function setTheme(theme) {
+        currentTheme = theme;
+        document.documentElement.setAttribute("data-theme", theme);
+      }
+
+      // Initialisation du thème au chargement
+      function initializeTheme() {
+        const savedTheme = localStorage.getItem("gamer-theme") || "dark";
+        setTheme(savedTheme);
+
+        // Mettre à jour le bouton de thème
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) {
+          const icon = themeToggle.querySelector("i");
+          if (icon) {
+            icon.className =
+              currentTheme === "dark" ? "fas fa-moon" : "fas fa-sun";
+          }
+        }
+      }
+
+      // Gestion de la navigation par ancres
+      function setupNavigation() {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        // Gérer le clic sur les liens de navigation
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Retirer la classe active de tous les liens
+            navLinks.forEach((l) => l.classList.remove("active"));
+
+            // Ajouter la classe active au lien cliqué
+            this.classList.add("active");
+
+            // Faire défiler vers la section correspondante
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+            }
+          });
+        });
+
+        // Mettre en surbrillance le lien actif selon le scroll
+        window.addEventListener("scroll", function () {
+          const sections = document.querySelectorAll("section[id], header[id]");
+          const navLinks = document.querySelectorAll(".nav-link");
+
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 200) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        });
+      }
+
+      // Test automatique des fonctionnalités
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialiser le thème
+        initializeTheme();
+
+        // Initialiser la navigation
+        setupNavigation();
+
+        setTimeout(() => {
+          console.log("🎮 Gamer's Zone - Page chargée avec succès !");
+          console.log("✨ Fonctionnalités disponibles :");
+          console.log("   - Mode sombre/clair (bouton en haut à droite)");
+          console.log("   - Animations CSS au survol");
+          console.log("   - Design responsive");
+          console.log("   - Particules d'arrière-plan");
+          console.log("   - Effets hover 3D sur les cartes");
+          console.log("   - Navigation par ancres fluide");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
