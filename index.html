@@ -49,6 +49,11 @@
     <!-- Navigation principale -->
     <nav class="main-nav">
       <div class="nav-container">
+        <button class="menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul id="myMenu">
           <li>
             <a href="#accueil" class="nav-link active"
@@ -470,6 +475,24 @@
         }
       }
 
+      // Gestion du menu mobile
+      function toggleMobileMenu() {
+        const menu = document.getElementById("myMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        menu.classList.toggle("nav-open");
+        menuToggle.classList.toggle("active");
+      }
+
+      // Fermer le menu mobile quand on clique sur un lien
+      function closeMobileMenu() {
+        const menu = document.getElementById("myMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        menu.classList.remove("nav-open");
+        menuToggle.classList.remove("active");
+      }
+
       // Gestion de la navigation par ancres
       function setupNavigation() {
         const navLinks = document.querySelectorAll(".nav-link");
@@ -495,7 +518,20 @@
                 block: "start"
               });
             }
+
+            // Fermer le menu mobile
+            closeMobileMenu();
           });
+        });
+
+        // Fermer le menu mobile quand on clique en dehors
+        document.addEventListener("click", function (e) {
+          const menu = document.getElementById("myMenu");
+          const menuToggle = document.querySelector(".menu-toggle");
+
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            closeMobileMenu();
+          }
         });
 
         // Mettre en surbrillance le lien actif selon le scroll
